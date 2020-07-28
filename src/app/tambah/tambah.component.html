@@ -1,0 +1,23 @@
+<h3 mat-dialog-title>Tambahkan Wisata </h3>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Nama Wisata</mat-label>
+    <input matInput [(ngModel)]="data.nama_wisata">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Lokasi</mat-label>
+    <input matInput [(ngModel)]="data.lokasi">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Negara</mat-label>
+    <input matInput [(ngModel)]="data.negara">
+  </mat-form-field>
+
+</div>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>Batal</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+</mat-dialog-actions>
